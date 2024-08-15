@@ -26,6 +26,9 @@
         document.write(`Olá, <strong>${nome}</strong>. Seu nome tem ${nome.length} letras.<br>`)
         document.write(`Seu nome em letras maiúsculas fica ${nome.toUpperCase()}.<br>`)
         document.write(`Seu nome em letras minúsculas é ${nome.toLowerCase()}`)
+        var n1 = window.prompt('Digite um valor: ')
+        n1.toLocaleString('pt-BR',{style: 'currency', currency:'BRL'})
+        document.write(`O valor digitado foi R$${n1.toLocaleString('pt-BR',{style: 'currency', currency:'BRL'})}`) // Código para transformar um valor em Real brasileiro.
     </script>
 </body>
 </html>
