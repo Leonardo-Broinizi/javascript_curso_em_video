@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0>">
+    <title>Exercício 009</title>
+</head>
+<body>
+<h1>Nacionalidade</h1>
+<p>Em qual país você nasceu? </p>
+<input type="text" name="país" id="país">
+<input type="button" value="Verificar" onclick="Verificar()">
+<div id="r">
+</div>
+<script>
+    function Verificar() {
+        var país = window.document.querySelector('input#país')
+        var paístxt = String(país.value)
+        var r = window.document.querySelector('div#r')
+        r.innerHTML = `Sendo do ${paístxt} `
+        if (paístxt == 'Brasil') { 
+            r.innerHTML += `você é brasileiro!`
+        } else if (paístxt == `Estados Unidos`) {
+            r.innerHTML += `você é americano!`
+        } else {
+            r.innerHTML += `você é estrangeiro!`
+        }
+    }
+</script>
+</body>
+</html>
+
+
+
+
+<!--<script>
+    console.log(`Vivendo em ${país}`)
+    if (país == 'Brasil') {
+        console.log(`Você é brasileiro!`)
+    } else {
+        console.log(`Você é estrangeiro!`)
+    }
+</script>-->
