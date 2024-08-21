@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(238, 223, 156);
+    font: normal 15pt Arial;
+}
+a {
+background-color: #b86416d2;
+}
+
+header {
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.308);
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);
+    text-align: center;
+}
+
+#imagem {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.623);
+}
