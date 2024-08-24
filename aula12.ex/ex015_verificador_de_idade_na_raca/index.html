@@ -8,6 +8,9 @@
         * {
             padding: 0px;
             margin: 0px;
+        }
+        
+        body {
             background-color: rgb(66, 116, 253);
         }
 
@@ -19,7 +22,7 @@
             margin: 1.5rem;
         }
 
-        div p {
+        div {
             background-color: white;
             max-width: 700px;
             min-width: 400px;
@@ -32,9 +35,9 @@
             box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.397);
         }
 
-        main > div > p {
+        main > div > form > p {
             font-family: Arial, Helvetica, sans-serif;
-            padding: 10px;
+            padding: 1rem;
         }
 
         footer > p {
@@ -55,9 +58,15 @@
     </header>
     <main>
         <div>
-            <p>
-                Ano de Nascimento: <input type=""></input> 
-            </p>
+            <form action="">
+                <p>
+                    <label for="iano">Ano de Nascimento:</label> 
+                    <input type="number" name="ano" id="iano" required></input>
+                </p>
+                <p>
+                    <input type="submit" value="Enviar">
+                </p>
+            </form>
             
         </div>
     </main>
