@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <div>
+            <form action="get">
+                <p>
+                    <label for="iin">Início:</label>
+                    <input type="number" name="in" id="iin">
+                </p>
+                <p>
+                    <label for="ifim">Fim:</label>
+                    <input type="number" name="fim" id="ifim">
+                </p>
+                <p>
+                    <label for="ipasso">Passo:</label>
+                    <input type="number" name="passo" id="ipasso">
+                </p>
+                <p>
+                    <input type="button" name="enviar" id="ienviar" value="contar" onclick="contar()">
+                </p>
+                <p id="cont">Preparando a contagem...</p>
+            </form>
+        </div>
+        <div>
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVídeo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
