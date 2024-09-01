@@ -8,12 +8,14 @@ function contar() {
         contando.innerHTML = `Impossível contar!`
     } else if (passo == 0) {
         alert(`Passo inválido! Considerando PASSO 1`) 
-        passo = 1 
-    }
-    while (início <= fim) { 
+        passo = 1  
+    } 
+    var base = 0
+    while (início <= fim) {
         início = início + passo 
-    }
-    alert(`${início}`) 
+        base += passo
+    } 
+    contando.innerHTML = `5 ${base}`  
     /* 
     for (início; início <= fim; início += passo) {
         console.log(`${início}`) 
