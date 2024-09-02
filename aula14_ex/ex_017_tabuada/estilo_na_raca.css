@@ -3,6 +3,15 @@ body {
     font: normal 15pt Arial;
 }
 
+h1 {
+    text-align: center;
+}
+
+#itab option {
+    padding: 0px;
+    
+}
+
 header {
     color: white;
 }
