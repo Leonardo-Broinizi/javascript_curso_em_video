@@ -14,7 +14,7 @@ function calcular(){
     //alert(num.value) 
 }
 
-
+//   Melhorei meu código tornandoo mais econômico ao substituir as varias declarações abaixo pela solução mais lógica acima. Mesmo assim, agora que ví a resolução do professor, percebo que ele usou um jeito ainda mais eficiente, que não concebí por não saber daquela possibilidade. Preciso conhecer melhor a linguagem.
 
 
 /*
