@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício próprio de JavaScript</title>
+</head>
+<body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif; color: blue">Eventos DOM</h1>
+
+    <form action="get">
+        <p><label for="iback">Escolha a cor de fundo dessa página: </label>
+        <input type="text" name="back" id="iback" placeholder="Escreva o nome da cor aqui: "></p>
+        <p><label for="iquadrado">Quer ver um quadrado no centro dessa página?</label>
+        <input type="text" name="quadrado" id="iquadrado" placeholder="Responda SIM ou NÃO"></p>
+
+        <p><label for="ienviar">Clique aqui: </label>
+            <input type="button" value="Enviar" name="enviar" id="ienviar" onclick="rodando()"></p>
+        <p><label for="ilimpar">Limpar</label>
+            <input type="reset" id="ilimpar"></p>
+    </form>
+
+    <script src="ex01.js"></script>
+</body>
+</html>
