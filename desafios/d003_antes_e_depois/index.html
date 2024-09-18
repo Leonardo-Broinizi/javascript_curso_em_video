@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Antes e Depois</title>
+    <style>
+        * {
+            font-family:Arial, Helvetica, sans-serif
+        }
+
+        div {
+            display: inline;
+            border: .3px solid rgba(0, 0, 0, 0.301);
+            padding: 10px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
+            background-color: rgb(207, 207, 207);
+        }
+
+        div:hover {
+            box-shadow: .5px .5px .5px rgba(0, 0, 0, 0.39);
+            border: none;
+            background-color: rgb(240, 240, 240);
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <div onclick="acao()">Antecessor e Sucessor</div>
+    <script>
+        function acao() {
+            let num = Number.parseInt(prompt('Digite um número inteiro qualquer: '))
+            alert(`Antes de ${num} temos o número ${num-1}.\nDepois de ${num} temos o número ${num+1}.`)
+        }
+    </script>
+</body>
+</html>

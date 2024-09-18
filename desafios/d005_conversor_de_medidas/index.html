@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Medidas</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            display: inline-block;
+            padding: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.486);
+            background-color: rgba(128, 128, 128, 0.301);
+        }
+    </style>
+</head>
+<body>
+    <h1>Convesor de Medidas</h1>
+
+    <div onclick="conversor()">Converter</div>
+
+    <p id="res">Clique no botão acima para iniciar.</p>
+
+    <script>
+        function conversor() {
+            let metros = window.prompt('Digite uma distância em metros (m)')
+
+            metros = metros.replace(',', '.')
+            metros = Number.parseFloat(metros)
+
+            let km = metros / 1000
+            let hm = metros / 100
+            let dam = metros / 10
+            let dm = metros * 10
+            let cm = metros * 100
+            let mm = metros * 1000
+
+            let result = document.getElementById("res")
+
+            if (dam/dam != 0) {
+                dam = dam.toFixed(2)
+            }
+            if (dm/dm != 0) {
+                dm = dm.toFixed(2)
+            }
+            if (cm/cm != 0) {
+                cm = cm.toFixed(2)
+            }
+            if (mm/mm != 0) {
+                mm = mm.toFixed(2)
+            }
+            result.innerHTML = `<h2>A distância de ${metros} metros corresponde a:</h2><p>${km} quilômetros (Km)</p><p>${hm} hectômetros (Hm)</p><p>${dam} decâmetros (Dam)</p><p>${dm} decímetros (dm)</p><p>${cm} centímetros (cm)</p><p>${mm} milímetros (mm)</p>`
+        }
+    </script>
+</body>
+</html>

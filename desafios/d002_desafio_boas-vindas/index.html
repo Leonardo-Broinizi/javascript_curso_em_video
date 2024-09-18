@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas-vindas</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1, div {
+            margin: 15px;
+        }
+
+        div {
+            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.445);
+            background-color: lightgray;
+            box-sizing: 1px 1px 1px rgba(0, 0, 0, 0.568);
+            display: inline-block;
+            cursor: pointer;
+            transition: .5s; /* Obs.: deixando o transition no hover o atraso dele só se dará quando o evento começar, e não quando terminar (exemplo: quando tirar o cursor desta div) como acontece estando no elemento. Tentei por esse estilo no hover e percebi isso. */
+        }
+
+        div:hover {
+            background-color: gray;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Boas-vindas</h1>
+    <div onclick="boasVindas()">Inicie o desafio</div>
+    <script>
+        function boasVindas() {
+            let nome = window.prompt('Qual é o seu nome?')
+            let idade = window.prompt(`Olá, ${nome}. Quantos anos você tem?`)
+            window.alert(`Acabei de conhecer o ${nome}, que tem ${idade} anos de idade!`)
+        }
+        
+    </script>
+</body>
+</html>
