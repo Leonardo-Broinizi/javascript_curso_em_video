@@ -34,8 +34,7 @@
     <script>
         function converter() {
             let res = document.getElementById("result")
-            let cel = window.prompt('Digite uma temperatura em ºC (Celsius)')
-            cel.replace(',', '.')
+            let cel = window.prompt('Digite uma temperatura em ºC (Celsius)').replace(',', '.')
             cel = Number.parseFloat(cel)
 
             let kel = cel + 273

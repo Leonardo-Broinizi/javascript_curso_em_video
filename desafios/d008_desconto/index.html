@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html land="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio desconto de 10%</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            display: inline-block;
+            padding: 20px;
+            background-color: lightgray;
+            border: 1px solid rgba(0, 0, 0, 0.459);
+        }
+
+        div:hover {
+            background-color: gray;
+            border: 1px solid white;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+
+    <div onclick="descontar()">Desconto de 10%</div>
+
+    <p id="saida">Clique no botão acima para iniciar.</p>
+
+    <script>
+        function descontar() {
+            let produto = prompt('Qual é o produto que você está comprando?')
+            let preço = prompt(`Qual é o preço de ${produto}?`).replace('.', '').replace(',', '.')
+            preço = Number.parseFloat(preço)
+            let desconto = preço / 10
+            let novo_preço = preço - desconto
+            let sai = document.querySelector('p#saida')
+            // Agora sim eu consegui formatar bem as strings (com a ajuda do stack overflow)
+            sai.innerHTML = `<h1>Calculando desconto de 10% para smart wacth</h1><p>O preço original era R$${preço.toLocaleString('pt-br', {minimumFractionDigits: 2})}.</p><p>Você acaba de ganhar R$${desconto.toLocaleString('pt-br', {minimumFractionDigits: 2})} de desconto (-10%).</p><p>No fim, você vai pagar R$${novo_preço.toLocaleString('pt-br', {minimumFractionDigits: 2})} no produto smart watch.</p>`
+        }
+
+    </script>
+</body>
+</html>

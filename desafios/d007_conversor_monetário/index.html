@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Monetário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif; 
+        }
+        div {
+            display: inline-block;
+            padding: 20px;
+            background-color: gray;
+            border: 1px solid rgba(0, 0, 0, 0.637);
+        }
+        div:hover {
+            background-color: lightgray;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ &rarr; US$</h1>
+    <div onclick="conversor()">
+        Converter
+    </div>
+    <p id="saida">Clique no botão acima para iniciar.</p>
+    <script>
+        let cot = prompt('Antes de mais nada, quanto está a cotação do dólar agora?').replace(',', '.')
+
+        function conversor() { // não cosegui fazer uma formatação ideal (colocando todos os pontos e vírgulas no lugar certo)
+            reais = prompt('Quantos R$ você tem na carteira?').replace(',', '.').toLocaleString('pt-BR')
+            let result = reais / cot
+            reais = Number(reais)
+            let saída = document.querySelector('p#saida')
+            saída.innerHTML = `Com a cotação do Dólar em ${cot.replace('.', ',')} seus R$${reais.toLocaleString('pt-BR')} equivalem a U$${result.toLocaleString('pt-BR')}.`       
+        }
+    </script>
+</body>
+</html>
