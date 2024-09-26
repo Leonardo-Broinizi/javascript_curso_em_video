@@ -12,9 +12,8 @@
         div {
             display: inline-block;
             padding: 20px;
-            background-color: lightcyan;
+            background-color: rgb(52, 206, 206);
             border: 1px solid gray;
-
         }
 
         div:hover {
@@ -34,14 +33,18 @@
     <script>
         function reajustar() {
             let funcionário = prompt('Qual é o nome do funcionário?')
-            let salário = prompt(`Qual é o salário de ${funcionário}?`)
-            let porcontagem = prompt(`O salário de ${funcionário} vai ser reajustado em qual porcentagem?`)
+            let salário = prompt(`Qual é o salário de ${funcionário}?`).replace('.','').replace(',','.')
+            let porcentagem = prompt(`O salário de ${funcionário} vai ser reajustado em qual porcentagem?`).replace('%','').replace(',', '.')
             let saída = document.querySelector('p#saida')
             let aumento = salário / 100 * porcentagem
-            let novo_salário = salário + aumento
+            let novo_salário = Number.parseFloat(salário) + aumento
 
-            alert(`${novosalário}`)
-            saída.innerHTML = `Olá`
+            salário = Number(salário)
+            porcentagem = Number(porcentagem)
+
+            saída.innerHTML = `<h1>Pedro Paulo recebeu um aumento salarial!</h1><p>O salário era R$${salário.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}.</p><p>Com um aumento de ${porcentagem}%, o salário vai aumentar R$${aumento.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} no próximo mês.</p><p>E a partir daí, ${funcionário} vai passar a ganhar R$${novo_salário.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}.</p>`
+
+            // Para formatar o dinheiro para o formato brasileiro, usando o código '.toLocaleString('pt-br', {minimumFractionDigits: 2})}', é preciso que a variável seja Number. 
         }
     </script>
 </body>
