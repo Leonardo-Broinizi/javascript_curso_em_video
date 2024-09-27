@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de Bhaskara</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div {
+            display: inline-block;
+            border: 1px solid gray;
+            padding: 15px;
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        div:hover {
+            border: 1px solid gray;
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+
+    <div onclick="calcular()">Calcular</div>
+    
+    <p id="saida">Considerando uma equação no formato <i>ax² + bx + c = 0</i>, aperte o botão acima para calcular o valor de Δ.</p>
+
+
+    <script>
+        function calcular() {
+            let a = prompt('Qual é o valor de a?')
+            let b = prompt('Qual é o valor de b?')
+            let c = prompt('Qual é o valor de c?')
+
+            let delta = b**2-4*a*c
+            var saida = document.querySelector('p#saida')
+            saida.innerHTML = `<h1>Resolvendo Bhaskara</h1><p>A equação atual é <strong>${a}x² + ${b}x + ${c} = 0</strong></p><p>O cálculo realizado será <strong>Δ = ${b}² - 4 . ${a} . ${c}</strong></p><p>O valor calculado foi <strong>Δ = ${delta}</strong></p>`
+
+            //delta = Math.sqrt(b**2-4*a*c)
+            // let delta = ( -b +- (Math.sqrt(b**2-4 * a * c) / 2 * a ))
+            //alert(delta)
+            //x = (-b +- (Math.sprt(b**2-4*a*c)) / 2 * a )
+        }
+    </script>
+</body>
+</html>
