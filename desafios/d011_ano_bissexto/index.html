@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid gray;
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        div:hover {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="background-color: blue;">Ano Bissexto</h1>
+
+    <div onclick="calcular()">Verificar</div>
+
+    <p id="saida">Informe um ano para saber se ele é bissexto</p>
+
+    <script>
+        function calcular() {
+            let ano = prompt('Qual é o ano que você quer verificar?')
+            let saída = document.querySelector('p#saida')
+            
+            let resp = " <style='background-color: blue;'> Olá</style>"
+
+            saída.innerHTML = `<h1>Analisando o ano de ${ano}...</h1><p>O ano de ${ano}${resp}`
+        }
+
+    </script>
+</body>
+</html>
