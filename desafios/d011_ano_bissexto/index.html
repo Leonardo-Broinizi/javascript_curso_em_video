@@ -13,6 +13,7 @@
             display: inline-block;
             padding: 20px;
             border: 1px solid gray;
+            border-radius: 10px;
             background-color: lightgray;
             cursor: pointer;
         }
@@ -24,20 +25,31 @@
     </style>
 </head>
 <body>
-    <h1 style="background-color: blue;">Ano Bissexto</h1>
+    <h1>Ano Bissexto</h1>
 
     <div onclick="calcular()">Verificar</div>
 
-    <p id="saida">Informe um ano para saber se ele é bissexto</p>
+    <p id="saida">Informe um ano para saber se ele é bissexto.</p>
+
+    
+
 
     <script>
         function calcular() {
             let ano = prompt('Qual é o ano que você quer verificar?')
             let saída = document.querySelector('p#saida')
             
-            let resp = " <style='background-color: blue;'> Olá</style>"
+            ano = parseInt(ano)
 
-            saída.innerHTML = `<h1>Analisando o ano de ${ano}...</h1><p>O ano de ${ano}${resp}`
+            if (ano % 400 == 0) {
+                var resp = "<p style='display:inline;'><strong style='display:inline; background-color:lightgreen; color:green;'>É BISSEXTO</strong>&#9989;</p>"
+            } else if (ano % 4 == 0 && ano % 100 != 0 ) {
+                var resp = "<p style='display:inline;'><strong style='display:inline; background-color:lightgreen; color:green;'>É BISSEXTO</strong>&#9989;</p>"
+            } else {
+                var resp = "<p style='display:inline;'><strong style='display:inline; background-color:lightsalmon; color:red;'>NÃO É BISSEXTO</strong>&#10060;</p>"
+            }
+            
+            saída.innerHTML = `<h1>Analisando o ano de ${ano}...</h1><p style='display:inline;'>O ano de ${ano} ${resp}</p>`
         }
 
     </script>
