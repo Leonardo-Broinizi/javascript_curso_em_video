@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio "Situação do Aluno"</title>
     <style>
-        * {padding:0px; margin: 0px;font-family: Arial, Helvetica, sans-serif;}
+        * {padding:0px;font-family: Arial, Helvetica, sans-serif;}
         div {
             display: inline-block;
-            margin: 15px;
             background-color: lightgrey;
             padding: 10px;
             border: 1px solid gray;
@@ -18,11 +17,56 @@
             color: white;
             background-color: gray;
         }
+        div, h2, p {
+            margin: 20px 0px;
+        }
+        #rep {
+            color: red;
+            background-color: tomato;
+        }
+        #rec {
+            color: orange;
+            background-color: yellow;
+        }
+        #apr {
+            color: green;
+            background-color: lightgreen;
+        }
     </style>
 </head>
 <body>
     <h1>Situação do aluno</h1>
-    <div>Entrar com as notas</div>
+    <div onclick="boletim()">Entrar com as notas</div>
     <p id="entrada">Clique no botão acima para informar as notas do aluno.</p>
+
+    <h2 id="analisando"></h2>
+    <p id="notas"></p>
+    <p id="situacao"></p>
+
+    <script>
+        function boletim() {
+            let nome = prompt(`Qual é o nome do aluno?`)
+            let n1 = parseFloat(prompt(`Primeira nota de ${nome}?`))
+            let n2 = parseFloat(prompt(`Segunda nota de ${nome}:`))
+            
+            let média = ((n1 + n2) / 2).toFixed(2)
+
+            let analisando = document.getElementById('analisando')
+            let notas = document.getElementById('notas')
+            let situação = document.getElementById('situacao')
+            analisando.innerHTML = `Analisando a situação de Ana Maria`
+            notas.innerHTML = `Com as notas de ${n1} e ${n2}, a <strong>média é ${média}</strong>`
+            if (média < 3.0) {
+                situação.innerHTML = `Com média abaixo de 3,0, o aluno está <strong id="rep">REPROVADO</strong>`
+            } else if (média < 6.0) {
+                situação.innerHTML = `Com média entre 3,0 e 6,0. o aluno está em <strong id="rec">RECUPERAÇÃO</strong>`
+            } else {
+                situação.innerHTML = `Com média acima de 6,0, o aluno está <strong id="apr">APROVADO</strong>`
+            }
+            
+            
+            
+        }
+    </script>
 </body>
 </html>
