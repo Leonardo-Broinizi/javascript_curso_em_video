@@ -53,7 +53,7 @@ function finalizar() {
         }
         média = soma / valores.length
 
-        res.innerHTML = `<br>Ao todo, temos ${valores.length} números cadastrados.<br><br>O maior valor informado foi ${maior}.<br><br>O menor valor encontrado foi ${menor}.<br><br>Somando todos os valores, temos ${soma} .<br><br>A média dos valores digitados é ${média}.`
+        res.innerHTML = `<br>Ao todo, temos ${valores.length} números cadastrados.<br><br>O maior valor informado foi ${maior}.<br><br>O menor valor encontrado foi ${menor}.<br><br>Somando todos os valores, temos ${soma} .<br><br>A média dos valores digitados é ${média.toFixed(2)}.`
     
     }
 }
